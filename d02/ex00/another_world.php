@@ -1,9 +1,9 @@
-#!/usr/bin/php	
+#!/usr/bin/php
 <?PHP
 if ($argc <= 1) {
 	return ;
 }
 else
-	$tab = array_filter(explode(" ", $argv[1]));
-	print(implode(" ", $tab) . "\n");
+	$words = preg_split('/\s+/', $argv[1]);
+	print(implode(" ", $words) . "\n");
 ?>
